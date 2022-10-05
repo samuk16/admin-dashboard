@@ -1,0 +1,52 @@
+
+:root{
+
+    --back:#6B6885;
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color:var(--back); */
+    background: linear-gradient(107.55deg, rgba(147, 141, 141, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), #6B6885;
+    height: 100vh;
+    mix-blend-mode: normal;
+}
+
+.containerMain{
+
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.3);
+    /* mix-blend-mode: normal; */
+    box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.08), inset 5px -5px 12px rgba(0, 0, 0, 0.05), inset -5px 5px 12px rgba(0, 0, 0, 0.05);
+    /* backdrop-filter: blur(75px); */
+
+
+}
+
+.imgPerfil{
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+
+    background-image: url(./imgs/gohan.jpeg);
+    background-size: cover;
+    
+}
+
+.miniPerfil{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    background-image: url(./imgs/gohan.jpeg);
+    background-size: cover;
+
+}
