@@ -37,6 +37,8 @@ body{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 80px 3fr 40px;
+
+    padding: 0 50px 0 0;
     
 
 }
@@ -132,6 +134,7 @@ body{
     grid-column: 2;
     grid-row: 2;
 
+    overflow: auto;
 }
 
 
@@ -176,6 +179,7 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
     gap: 42px 0px;
+    overflow: auto;
 
 
 }
@@ -223,6 +227,64 @@ body{
     text-overflow: ellipsis;
     text-justify: auto;
 
+}
+
+.containerMiniPerfil{
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+
+}
+
+
+.containerAnnunRight > .containerAnnun{
+
+    background-color: var(--backObj);
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+
+    margin: 0 0 20px 0;
+
+}
+
+.containerAnnunRight > .containerAnnun >
+.itemAnnun>:nth-child(2){
+    font-size:14px;
+    /* background-color: aqua; */
+}
+
+.containerAnnunRight > .containerAnnun >
+.itemAnnun>:nth-child(1){
+    
+    margin: 0 0 8px 0;
+    
+}
+
+.containerAnnunRight > .containerTrending{
+
+    background-color: var(--backObj);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px;
+}
+
+.containerAnnunRight > .containerTrending >
+.itemTrend{
+    display: flex;
+    gap: 15px;
+}
+
+.tAnunTren{
+    margin: 0 0 16px 0;
 }
 
 p{
