@@ -6,6 +6,9 @@
     --backObj:rgba(22, 23, 23, 0.5);;
     --textNormal:#BEC2CA;
     --textTitle:#FFFFFF;
+
+    --strokeColor:#BEC2CA;
+    --likeColor:#D40707;
 }
 
 *{
@@ -17,314 +20,20 @@
 }
 
 body{
-    /* background-color:var(--back); */
-    background: linear-gradient(107.55deg, rgba(147, 141, 141, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), #6B6885;
-    
-    height: 100vh;
 
+    background: linear-gradient(107.55deg, rgba(147, 141, 141, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), #6B6885;   
+    height: 100vh;
     mix-blend-mode: normal;
-}
-
-.containerMain{
-
-    height: 100vh;
-
-    background: rgba(0, 0, 0, 0.3);
-    /* mix-blend-mode: normal; */
-    box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.08), inset 5px -5px 12px rgba(0, 0, 0, 0.05), inset -5px 5px 12px rgba(0, 0, 0, 0.05);
-    /* backdrop-filter: blur(75px); */
-
-    display: grid;
-    grid-template-columns: 1.2fr 3fr 1fr;
-    grid-template-rows: 80px 3fr 40px;
-
-    padding: 0 50px 0 0;
-    
-
-}
-
-.containerLeft{
-    grid-column: 1;
-    grid-row: 2;
-
-    display: grid;
-    
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1.5fr ;
-    /* margin: 40px 0 0 0; */
-    /* gap: 40px; */
-
-
-    
-}
-
-.containerLeft > .containerMenuOp{
-    display: flex;
-    flex-direction: column;
-    gap: 23px;
-    ;
-}
-
-.containerMenuOp > div{
-    display: flex;
-    align-items:center;
-    gap: 6px;
-    margin: 0 0 0 20px;
-
-}
-
-/* .containerSvgConfig{
-    margin: 0 0 0 20px;
-} */
-
-
-
-.containerLeft > .containerProfile{
-
-    justify-self: center;
-    text-align: center;
-    
-
-    display: flex;
-    flex-direction: column;
-    
-    gap: 40px;
-    margin: 20px 0 0 0;
-
-}
-
-.containerProfile > .subcontainerProfile{
-
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-}
-
-.titleBoard{
-    grid-column: 1;
-    grid-row: 1;
-
-    align-self: center;
-    justify-self: center;
-
-    
-}
-
-.title{
-    font-size: 24px;
-}
-
-.containerInSearch{
-    grid-column: 2;
-    grid-row: 1;
-
-    display: flex;
-    align-items: center;
-}
-
-
-.containerInSearch > .search{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.containerProjectsCenter{
-    grid-column: 2;
-    grid-row: 2;
-
-    overflow: auto;
-}
-
-
-.containerRight{
-    grid-column: 3;
-    grid-row: 2;
-}
-
-
-.containerSvgConfig{
-    grid-column: 1;
-    grid-row: 3;
-    margin: 0 0 0 20px;
-}
-
-.containerControlsProfile{
-    display: flex;
-    gap: 23px;
-}
-
-
-
-
-.inputSearch{
-
-    height: 40px;
-    border-radius: 30px;
-    border-style: none;
-    width: 500px;
-
-    background-color: var(--backObj);
-
-
-}
-
-.containerProjectsCenter > .tProject{
-    margin: 0 0 16px 0;
-    
-}
-
-.containerProjects{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
-    gap: 60px 60px;
-    margin: 0 100px 0 0;
-    /* overflow: auto; */
-
-
-}
-
-/* @media (max-width: 1384px) {
-    .containerProjects{
-        justify-items: center;
-    }
-
-    .itemProject{
-        justify-self: center;
-
-    }
-    .itemProject{
-         justify-self: center; 
-        width: 200px;
-    }
-}
-     */
-
-
-.containerProjects > .itemProject{
-
-    background-color: var(--backObj);
-    /* width: 400px;
-    height: 230px; */
-    /* justify-self: center; */
-
-    border-radius: 10px;
-
-    padding: 33px 30px 26px 50px;
-
-    display: flex;
-    flex-direction: column;
-    /* height: 100%; */
-    /* gap: 30px; */
-
-}
-.itemProject > .subTitle{
-    margin: 0 0 30px 0;
-
-}
-
-
-
-.itemProject > .containerSvgProjects{
-
-    flex-basis:40% ;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 12px;
-   
-    
-    
-
-}
-
-.itemProject > .textProject{
-
-    text-overflow: ellipsis;
-    text-justify: auto;
-
-}
-
-.containerMiniPerfil{
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 15px;
-
-}
-
-
-.containerAnnunRight > .containerAnnun{
-
-    background-color: var(--backObj);
-    border-radius: 10px;
-    
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 30px;
-
-    margin: 0 0 20px 0;
-
-}
-
-.containerAnnunRight > .containerAnnun >
-.itemAnnun>:nth-child(2){
-    font-size:14px;
-    /* background-color: aqua; */
-}
-
-.containerAnnunRight > .containerAnnun >
-.itemAnnun>:nth-child(1){
-    
-    margin: 0 0 8px 0;
-    
-}
-
-.containerAnnunRight > .containerTrending{
-
-    background-color: var(--backObj);
-    border-radius: 10px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding: 30px;
-}
-
-.containerAnnunRight > .containerTrending >
-.itemTrend{
-    display: flex;
-    gap: 15px;
-}
-
-.tAnunTren{
-    margin: 0 0 16px 0;
 }
 
 p{
     color:var(--textNormal) ;
 }
 
-.imgPerfil{
-    width: 118px;
-    height: 118px;
-    border-radius: 50%;
-
-    background-image: url(./imgs/gohan.jpeg);
-    background-size: cover;
-    
-}
-
-.miniPerfil{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-
-    
+button{
+    background-color: transparent;
+    border-color: transparent;
+    border: none;
 }
 
 .svgStyle{
@@ -346,55 +55,421 @@ p{
     
 }
 
+/* ----------------------------------------------------------------- */
 
-button{
-    background-color: transparent;
-    border-color: transparent;
-    border: none;
+
+.containerMain{
+
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.08), inset 5px -5px 12px rgba(0, 0, 0, 0.05), inset -5px 5px 12px rgba(0, 0, 0, 0.05);
+
+
+    display: grid;
+    grid-template-columns: 1.2fr 3fr 1fr;
+    grid-template-rows: 80px 3fr 40px;
+
+    padding: 0 50px 0 0;
+    
+
 }
 
 
-.transformStyle{
+/* ----------------------------------------------------------------- */
+
+
+.containerLeft{
+    grid-column: 1;
+    grid-row: 2;
+
+    display: grid;
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1.5fr ;
+
+
+    
+}
+
+.containerLeft > .containerMenuOp{
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    ;
+}
+
+.containerLeft > .containerMenuOp > div{
+    display: flex;
+    align-items:center;
+    gap: 6px;
+    margin: 0 0 0 20px;
+
+}
+
+
+.containerLeft > .containerProfile{
+
+    justify-self: center;
+    text-align: center;
+    
+
+    display: flex;
+    flex-direction: column;
+    
+    gap: 40px;
+    margin: 20px 0 0 0;
+
+}
+
+.containerLeft > .containerProfile > .subcontainerProfile{
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.containerLeft > .containerProfile > .containerControlsProfile{
+    display: flex;
+    gap: 23px;
+}
+
+.containerLeft > .containerProfile > .subcontainerProfile > .imgPerfil{
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+
+    background-image: url(./imgs/gohan.jpeg);
+    background-size: cover;
+    
+}
+
+.containerLeft > .containerMenuOp > div > .transformStyle{
     display: flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
 
 }
-.pMenu{
-    transition: all .2s ease-in-out;
-}
-.styleSvgMenu{
+
+.containerLeft > .containerMenuOp > div > .transformStyle > .pMenu{
     transition: all .2s ease-in-out;
 }
 
-.transformStyle:hover>.pMenu{
+.containerLeft > .containerMenuOp > div > .transformStyle > div > .styleSvgMenu{
+    transition: all .2s ease-in-out;
+}
+
+.containerLeft > .containerMenuOp > div > .transformStyle:hover > .pMenu{
     transform: scale(1.1);
     color: #FFFFFF;
 }
 
-.transformStyle:hover > div > .styleSvgMenu > .pathMenu{
+.containerLeft > .containerMenuOp > div > .transformStyle:hover > div > .styleSvgMenu > .pathMenu{
     stroke: #FFFFFF;
     
 }
 
 
+/* ----------------------------------------------------------------- */
 
-.gohan{
+
+
+.titleBoard{
+    grid-column: 1;
+    grid-row: 1;
+
+    align-self: center;
+    justify-self: center;
+
+    
+}
+
+.title{
+    font-size: 24px;
+}
+
+
+/* ----------------------------------------------------------------- */
+
+.containerInSearch{
+    grid-column: 2;
+    grid-row: 1;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.containerInSearch > .search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.containerInSearch > .search > label > .inputSearch{
+
+    height: 40px;
+    border-radius: 30px;
+    border-style: none;
+    width: 500px;
+
+    background-color: var(--backObj);
+
+    color: var(--textNormal);
+    padding: 0 0 0 16px;
+
+    transition: all .2s ease-in-out;
+    outline: 2px solid transparent;
+}
+
+.containerInSearch > .search > label > .inputSearch:focus{
+
+    outline: 2px solid var(--textNormal);
+
+}
+
+/* ----------------------------------------------------------------- */
+
+
+.containerProjectsCenter{
+    grid-column: 2;
+    grid-row: 2;
+
+    overflow: auto;
+}
+
+.containerProjectsCenter > .tProject{
+    margin: 0 0 16px 0;
+    
+}
+
+.containerProjectsCenter > .containerProjects{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    gap: 60px 60px;
+    margin: 0 100px 0 0;
+
+}
+
+.containerProjectsCenter > .containerProjects > .itemProject{
+
+    background-color: var(--backObj);
+    border-radius: 10px;
+    padding: 33px 30px 26px 50px;
+
+    display: flex;
+    flex-direction: column;
+ 
+
+}
+.containerProjectsCenter > .containerProjects > .itemProject > .subTitle{
+    margin: 0 0 30px 0;
+
+}
+
+
+
+.containerProjectsCenter > .containerProjects > .itemProject > .containerSvgProjects{
+
+    flex-basis:40% ;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 12px;
+   
+    
+    
+
+}
+
+.containerProjectsCenter > .containerProjects > .itemProject > .textProject{
+
+    text-overflow: ellipsis;
+    text-justify: auto;
+
+}
+
+.likeTransition{
+    fill: var(--likeColor);
+    transform-origin: 50% 50%;
+
+}
+
+.likePath{
+    stroke: var(--strokeColor);
+}
+
+.likePathNew{
+    stroke:var(--likeColor) ;
+}
+
+.like{
+    fill: transparent;
+}
+
+@keyframes transitionLike{
+
+    0%{
+        transform: scale(0.1);
+        
+    }
+
+    50%{
+        transform: scale(0.5);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+/* ----------------------------------------------------------------- */
+
+
+.containerSvgConfig{
+    grid-column: 1;
+    grid-row: 3;
+    margin: 0 0 0 20px;
+}
+
+
+/* ----------------------------------------------------------------- */
+
+
+.containerMiniPerfil{
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+
+}
+
+.containerMiniPerfil > .miniPerfil{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+ 
+}
+
+.containerMiniPerfil > .gohan{
     background-image: url(./imgs/gohan.jpeg);
     background-size: cover;
 }
-.yaji{
+
+
+/* ----------------------------------------------------------------- */
+
+
+.containerAnnunRight > .containerAnnun{
+
+    background-color: var(--backObj);
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+
+    margin: 0 0 20px 0;
+
+}
+
+.containerAnnunRight > .containerAnnun > .itemAnnun > :nth-child(2){
+    font-size:14px;
+}
+
+.containerAnnunRight > .containerAnnun > .itemAnnun > :nth-child(1){
+    
+    margin: 0 0 8px 0;
+    
+}
+
+.containerAnnunRight > .containerTrending{
+
+    background-color: var(--backObj);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px;
+}
+
+.containerAnnunRight > .containerTrending > .itemTrend{
+    display: flex;
+    gap: 15px;
+}
+
+.containerAnnunRight > .tAnunTren{
+    margin: 0 0 16px 0;
+}
+
+.containerAnnunRight > .containerTrending > .itemTrend > .miniPerfil{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+ 
+}
+
+.containerAnnunRight > .containerTrending > .itemTrend > .gohan{
+    background-image: url(./imgs/gohan.jpeg);
+    background-size: cover;
+}
+
+.containerAnnunRight > .containerTrending > .itemTrend > .yaji{
     background-image: url(./imgs/Yajirobei.webp);
     background-size: cover;
 }
-.mrs{
+
+.containerAnnunRight > .containerTrending > .itemTrend > .mrs{
     background-image: url(./imgs/MrSatán.webp);
     background-size: cover;
     background-position: center;
 }
-.pai{
+
+.containerAnnunRight > .containerTrending > .itemTrend > .pai{
     background-image: url(./imgs/Paikuhan.webp);
     background-size: cover;
     background-position: center;
 }
+
+
+/* ----------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
