@@ -300,6 +300,9 @@ button{
 
 .likePath{
     stroke: var(--strokeColor);
+    transition: all .2s ease-in-out;
+    transform-origin: 50% 50%;
+
 }
 
 .likePathNew{
